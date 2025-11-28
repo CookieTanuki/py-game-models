@@ -3,6 +3,7 @@ import json
 import init_django_orm  # noqa: F401
 from db.models import Race, Skill, Guild, Player
 
+
 def main() -> None:
     with open("players.json", "r") as file:
         players = json.load(file)
