@@ -8,7 +8,7 @@ class Race(models.Model):
 
 class Skill(models.Model):
     name = models.CharField(unique=True, max_length=255)
-    bonus = models.CharField(unique=True, max_length=255)
+    bonus = models.CharField(max_length=255)
     race = models.ForeignKey(
         Race,
         on_delete=models.CASCADE,

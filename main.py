@@ -10,6 +10,9 @@ def main() -> None:
 
     for name, data in players.items():
         race_data = data.get("race")
+        if not race_data:
+            raise ValueError(f'Player "{name}" has no race defined.')
+
         race_obj, _ = Race.objects.get_or_create(
             name=race_data.get("name"),
             defaults={
